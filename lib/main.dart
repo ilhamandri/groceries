@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:groceries/module/home/home_page.dart';
+import 'package:groceries/shared/route_name.dart';
+import 'package:groceries/shared/route_page.dart';
 
 void main() {
   runApp(const MyApp());
@@ -17,7 +19,8 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: HomePage(),
+      initialRoute: RouteName.dashboard,
+      getPages: RoutePage.route,
     );
   }
 }

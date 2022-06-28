@@ -1,20 +1,22 @@
 import 'package:get/get.dart';
 
-class HomePageController extends GetxController {
-  final String title = 'Home Page';
-
+class ProfileController extends GetxController {
+  final String title = 'Profile';
   @override
   void onInit() {
+    // TODO: implement onInit
     super.onInit();
   }
 
   @override
   void onReady() {
+    // TODO: implement onReady
     super.onReady();
   }
 
   @override
   void onClose() {
+    // TODO: implement onClose
     super.onClose();
   }
 }

@@ -1,8 +1,7 @@
 import 'package:get/get.dart';
 
-class HomePageController extends GetxController {
-  final String title = 'Home Page';
-
+class CartController extends GetxController {
+  final String title = 'Cart Product';
   @override
   void onInit() {
     super.onInit();
