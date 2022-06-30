@@ -6,10 +6,10 @@ class ProfileResponse {
   ProfileResponse({this.result});
 
   factory ProfileResponse.fromJson(Map<String, dynamic> json) {
-    var list = json['result'] as List;
+    var list = json['results'] as List;
 
     List<ProfileModel>? res;
-    if (json['address'] != null) {
+    if (json['results'] != null) {
       res = list.map((i) => ProfileModel.fromJson(i)).toList();
     }
 

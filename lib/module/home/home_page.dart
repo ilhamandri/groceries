@@ -11,6 +11,7 @@ class HomePage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         elevation: 0,
+        backgroundColor: Color(0xff1EA050),
         title: Text(_controller.title),
       ),
       body: Column(

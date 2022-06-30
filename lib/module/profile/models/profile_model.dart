@@ -1,6 +1,7 @@
 import 'package:groceries/module/profile/models/id_model.dart';
 import 'package:groceries/module/profile/models/location_model.dart';
 import 'package:groceries/module/profile/models/name_model.dart';
+import 'package:groceries/module/profile/models/picture_model.dart';
 import 'package:groceries/module/profile/models/street_model.dart';
 
 class ProfileModel {
@@ -10,6 +11,7 @@ class ProfileModel {
   NameModel? name;
   LocationModel? location;
   IDModel? id;
+  PictureModel? picture;
 
   ProfileModel({
     this.name,
@@ -18,6 +20,7 @@ class ProfileModel {
     this.id,
     this.phone,
     this.gender,
+    this.picture,
   });
 
   factory ProfileModel.fromJson(Map<String, dynamic> json) {
@@ -28,6 +31,7 @@ class ProfileModel {
       name: json['name'] != null ? NameModel.fromJson(json['name']) : null,
       location: json['location'] != null ? LocationModel.fromJson(json['location']) : null,
       id: json['id'] != null ? IDModel.fromJson(json['id']) : null,
+      picture: json['picture'] != null ? PictureModel.fromJson(json['picture']) : null,
     );
   }
 }
