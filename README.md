@@ -1,6 +1,10 @@
-# groceries
+# How to use groceries
 
-A new Flutter project.
+- Pada menu homepage terdapat item-item yang dapat diliaht berdasarkan tab yang sudah disediakan.
+- Button Buy pada item dapat di klik untuk memasukkan item tersebut ke dalam cart.
+- Setiap item yang sudah dimasukkan ke dalam cart, dapat dilihat pada menu cart.
+- Setiap item di menu cart dapat dihapus dengan melakukan klik pada icon X.
+- Jika menu cart kosong maka akan menampilkan pesan sederhana yang menandakan bahwa cart kosong.
 
 ## Getting Started
 
