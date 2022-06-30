@@ -1,10 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:groceries/module/home/home_controller.dart';
 import 'package:groceries/module/profile/profile_controller.dart';
 import 'package:groceries/shared/widgets/info_container.dart';
 
 class ProfilePage extends StatelessWidget {
   final _controller = Get.put<ProfileController>(ProfileController());
+  var homeCtrl = Get.find<HomePageController>();
+
   ProfilePage({Key? key}) : super(key: key);
 
   @override
@@ -33,12 +36,12 @@ class ProfilePage extends StatelessWidget {
                           decoration: const BoxDecoration(shape: BoxShape.circle, color: Colors.white),
                           child: CircleAvatar(
                             radius: 60,
-                            backgroundImage: NetworkImage(_controller.user[0].picture!.large!),
+                            backgroundImage: NetworkImage(homeCtrl.user[0].picture!.large!),
                           ),
                         ),
                         const SizedBox(height: 12),
                         Text(
-                          '${_controller.user[0].name!.first!} ${_controller.user[0].name!.last!}',
+                          '${homeCtrl.user[0].name!.first!} ${homeCtrl.user[0].name!.last!}',
                           style: const TextStyle(fontSize: 16),
                         )
                       ],
@@ -53,18 +56,17 @@ class ProfilePage extends StatelessWidget {
                                 const BorderRadius.only(topLeft: Radius.circular(50), topRight: Radius.circular(50))),
                         child: Column(
                           children: [
-                            InfoContainer(image_path: 'assets/icon/id-card.jpg', info: _controller.user[0].id!.name!),
+                            InfoContainer(image_path: 'assets/icon/id-card.jpg', info: homeCtrl.user[0].id!.name!),
                             const SizedBox(height: 16),
-                            InfoContainer(image_path: 'assets/icon/email.jpg', info: _controller.user[0].email!),
+                            InfoContainer(image_path: 'assets/icon/email.jpg', info: homeCtrl.user[0].email!),
                             const SizedBox(height: 16),
-                            InfoContainer(image_path: 'assets/icon/phone.png', info: _controller.user[0].phone!),
+                            InfoContainer(image_path: 'assets/icon/phone.png', info: homeCtrl.user[0].phone!),
                             const SizedBox(height: 16),
                             InfoContainer(
                               image_path: 'assets/icon/location.jpg',
-                              info:
-                                  '${_controller.user[0].location!.state!} - ${_controller.user[0].location!.country!}',
+                              info: '${homeCtrl.user[0].location!.state!} - ${homeCtrl.user[0].location!.country!}',
                               additional_info:
-                                  '${_controller.user[0].location!.city!} - ${_controller.user[0].location!.street!.number!}',
+                                  '${homeCtrl.user[0].location!.city!} - ${homeCtrl.user[0].location!.street!.number!}',
                             ),
                           ],
                         ),

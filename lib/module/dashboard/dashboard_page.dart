@@ -25,7 +25,7 @@ class DashboardPage extends StatelessWidget {
           ),
           bottomNavigationBar: BottomNavigationBar(
             unselectedItemColor: Colors.black,
-            selectedItemColor: Colors.orange,
+            selectedItemColor: Color(0xff1EA050),
             showSelectedLabels: true,
             showUnselectedLabels: true,
             onTap: controller.changeTabIndex,

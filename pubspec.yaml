@@ -39,6 +39,7 @@ dependencies:
   cached_network_image: ^3.2.0
   lazy_load_scrollview: ^1.3.0
   http: ^0.13.4
+  shared_preferences: ^2.0.12
 
 dev_dependencies:
   flutter_test:
@@ -58,6 +59,7 @@ dev_dependencies:
 flutter:
   assets:
     - assets/icon/
+    - assets/images/
 
   # The following line ensures that the Material Icons font is
   # included with your application, so that you can use the icons in
