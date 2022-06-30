@@ -6,8 +6,8 @@ class DisplayItem extends StatelessWidget {
   String? name;
   String? price;
   String? image_path;
-
-  DisplayItem({Key? key, this.name, this.price, this.image_path}) : super(key: key);
+  VoidCallback? add;
+  DisplayItem({Key? key, this.name, this.price, this.image_path, this.add}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -51,7 +51,7 @@ class DisplayItem extends StatelessWidget {
             ),
           ),
           ElevatedButton(
-            onPressed: () {},
+            onPressed: add,
             child: Text('Buy'),
             style: ElevatedButton.styleFrom(
               primary: Color(0xff1EA050),

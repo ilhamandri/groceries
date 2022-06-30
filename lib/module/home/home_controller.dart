@@ -1,4 +1,5 @@
 import 'package:get/get.dart';
+import 'package:groceries/module/cart/cart_controller.dart';
 import 'package:groceries/module/profile/models/profile_model.dart';
 import 'package:groceries/module/profile/profile_service.dart';
 import 'package:groceries/module/profile/responses/profile_response.dart';
